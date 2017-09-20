@@ -25,4 +25,4 @@ Ecological Inference methods infer clues about individual-level behavior from ag
 
 If you want to understand exactly what Ecological Inference methods do and how I got to these results, you can check the paper [here](http://sbbd2016.fpc.ufba.br/sbbd2016/sbbd/sbbd_s002.pdf). Furthermore, I have made the dataset public as well as codes used in my analysis in a Github [repo](https://github.com/Guzpenha/Ecological-Inference-on-social-data).
 
-![event_photo]({{ site.baseurl }}/images/sbbd_photo.jpg){: .center-image}
+<!-- ![event_photo]({{ site.baseurl }}/images/sbbd_photo.jpg){: .center-image} -->
