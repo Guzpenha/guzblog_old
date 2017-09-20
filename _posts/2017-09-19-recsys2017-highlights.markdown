@@ -45,11 +45,11 @@ He points [here](http://dl.acm.org/citation.cfm?id=3109953&CFID=809538421&CFTOKE
 
 **[Personalizing Session-based Recommendations with Hierarchical Recurrent Neural Networks](http://dl.acm.org/citation.cfm?id=3109896):**Authors in this paper extend related work by adding an extra component on RNN Session-based Recommenders that captures users profiles and information between sessions. The idea is to use a hierarchical architecture that model cross-sessions iterations by adding another RNN between user sessions, which is capable of capturing the evolution of the user across sessions and providing personalization capabilities. Their results show that the proposed approach is better than baselines and state-of-the-art RNNs that are not sensitive to cross sessions interactions and the ones where user sessions are concatenated. 
 
-![alt](/images/recsys2017/4.png){: .center-image}
+![alt]({{ site.baseurl }}/images/recsys2017/4.png){: .center-image}
 
 **[Modeling User Session and Intent with an Attention-based Encoder-Decoder Architecture](https://doi.org/10.1145/3109859.3109917):** Loyola et al proposed an encoder-decoder architecture for the problem of predicting which item will be seen next for a user during a session and whether he has the intention to purchase an item or not. Inspired by recent encoder-decoder approaches in machine translation, the proposed model that is a bidirectional RNN as the encoder and a normal RNN as the decoder, and authors added alignment (passing labels as well as predictions to the next time state) and attention (encapsulating expressive portions of the source sequence in a separate block) mechanisms as well.
 
-![alt](/images/recsys2017/5.png){: .center-image}
+![alt]({{ site.baseurl }}/images/recsys2017/5.png){: .center-image}
 
 **[When Recurrent Neural Networks meet the Neighborhood for Session-Based Recommendation](https://doi.org/10.1145/3109859.3109872):** This paper makes shows how the state-of-the-art is still not well defined for session-based recommenders. Authors point for example that GRU4REC was evaluated on a proprietary protocol, making it hard to reproduce its results. They compare the proposed heuristic-based algorithm, that uses the most similar sessions to provide recommendations using a similarity measure to predict next items on the session, with GRU4REC and a hybrid of both. Jannach et al found that the nearest-neighbor scheme performed better in multiple datasets, and the hybridization of both recommenders could improve results, even more, capturing both co-occurrence and sequential signals in the data.
 
