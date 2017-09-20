@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Social Network Analysis &middot; Guz's blog
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/">
+          <h2 class="nav-title">Guz's blog</h2>
+        </a>
+        <ul>
+          <li><a href="http://localhost:4000/about">About</a></li>
+          <li><a href="/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by&nbsp;</span>
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2015-08-21 09:00:00 -0300">August 21, 2015</time>
+    
+  </div>
+
+  <h1 class="post-title">Social Network Analysis</h1>
+  <div class="post-line"></div>
+
+  <h1 id="social-networks">Social Networks</h1>
+<p>One of the topics of my research as an undergraduate at my university database laboratory <a href="http://lbd.dcc.ufmg.br/">LBD</a> is on <a href="https://en.wikipedia.org/wiki/Social_network_analysis#cite_note-1">Social Network Analysis</a>, which is a field involved with the study of relations that connect people. Examples of such networks are friendships, work-relations and social-media. Studying 
+these interactions and their actors is by no means recent, although modern technology has introduced new dimensions to these interactions, which can now happen in a different speed
+and intensity. An introductory book aimed for undergraduate students, with a inter-disciplinary approach has been released recently and its becoming more and more influential.
+It is named “Networks, crowds, and markets: Reasoning about a highly connected world” and can be read <a href="http://www.cs.cornell.edu/home/kleinber/networks-book/">here</a>. This book provides a really nice introduction to those who want to 
+study this subject further.</p>
+
+<h1 id="scientific-collaboration-networks">Scientific Collaboration Networks</h1>
+<p>I have been working with a specific kind of network that is build when two researchers publish a paper togheter. 
+A representation of this network can be made, where the nodes are the authors and the vertexes represent 
+the coauthorship relation when publishing a paper. One great software to visualize networks in this graph notation is <a href="http://gephi.github.io/">Gephi</a>, the figure above
+represents the Scientific Collaboration Network of a prestigious conference here in Brazil called <a href="http://dexl.lncc.br/sbbd2015/">SBBD</a> accounting for 30 years of publications. The 
+size and the color strength of the edges in this picture are proportional a weight scheme by Newman that measures the intensity of the collaboration between authors.</p>
+
+<p><img src="/images/gephi.png" alt="SBBD Network" /></p>
+
+<p>Studying these coauthorship networks might be very insightful,  for example in understanding how distinguished researchers collaborate as well as how Science evolves. 
+One could also use this network to rank researchers in performance and better understand how they connect and influence others. 
+This could be useful for example in the process of funding graduate programs or researchers, so much as finding the best study program to be part of.</p>
+
+<h1 id="networkx">NetworkX</h1>
+
+<p>Here I will just introduce this incredible python package which is helping a lot in my research, which is called
+<a href="http://networkx.github.io/">NetworkX</a>. Here you can find a very wide range of alghoritms to run at graphs (SNA metrics, clustering, cliques, components, cores, distances measures, flow), a lot of implemented 
+graph generators, import graphs using a lot of different formats, as well as drawing them for visualization. It has
+really intuitive examples and it is simple to use. Don’t waste your time implementing something that is so easily accessible, just
+use NetworkX. Look at the following example of using NetworkX to calculate a SNA metric named assortativity :</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">G</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">path_graph</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">r</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">degree_assortativity_coefficient</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="si">%3.1</span><span class="s">f"</span><span class="o">%</span><span class="n">r</span><span class="p">)</span>
+<span class="c">#-0.5</span></code></pre></figure>
+
+
+
+</div>
+
+<div class="pagination">
+  
+    <a href="http://localhost:4000/2015-12-23/titanic-data" class="left arrow">&#8592;</a>
+  
+  
+    <a href="http://localhost:4000/2015-03-25/programming-contests-and-online-judges" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2017-09-19 22:05:09 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+      </span>
+    </footer>
+  </body>
+</html>

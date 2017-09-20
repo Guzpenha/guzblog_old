@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      High order functions in Ruby &middot; Guz's blog
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/">
+          <h2 class="nav-title">Guz's blog</h2>
+        </a>
+        <ul>
+          <li><a href="http://localhost:4000/about">About</a></li>
+          <li><a href="/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by&nbsp;</span>
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2015-02-15 10:00:00 -0200">February 15, 2015</time>
+    
+  </div>
+
+  <h1 class="post-title">High order functions in Ruby</h1>
+  <div class="post-line"></div>
+
+  <h1 id="what-are-high-order-functions">What are high-order functions?</h1>
+<p>The order of the function is measured by the number of functions received as a parameter or returned. So a function that does not receive nor return functions is said to be of order zero, while a function that returns or receives a function of order n-1 has order n. There are a lot of high-order functions in Ruby language, even “.each” is one that you probably use unaware that it is a high-order function. I am going to explain some of them here with examples.</p>
+
+<h1 id="map">Map</h1>
+<p>There is also a function that does the same with the name ‘collect’ in ruby. It expects a function that will run on every item of the array and do that function to the item. In order to modify the array itself and not only return the new array .map! ought to be used. This is useful if we want to modify or get a new array based on every item of an array.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">map</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">}</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">map</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+	<span class="n">x</span><span class="o">*=</span><span class="n">x</span>
+<span class="k">end</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">map!</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span>
+	<span class="n">x</span><span class="o">*=</span><span class="n">x</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><img src="/images/map.png" alt="map" /></p>
+
+<h1 id="select">Select</h1>
+<p>This function is used to filter an array by a boolean expression, so it receives as a parameter a function that says whether the item should stay or not on the resulting array.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="p">[{</span><span class="ss">:name</span><span class="o">=&gt;</span><span class="s2">"Victor"</span><span class="p">,</span><span class="ss">:age</span> <span class="o">=&gt;</span><span class="mi">21</span><span class="p">},</span> <span class="p">{</span><span class="ss">:name</span><span class="o">=&gt;</span><span class="s2">"Victoria"</span><span class="p">,</span> <span class="ss">:age</span> <span class="o">=&gt;</span><span class="mi">20</span><span class="p">},</span> <span class="p">{</span><span class="ss">:name</span><span class="o">=&gt;</span><span class="s2">"Gabriel"</span><span class="p">,</span> <span class="ss">:age</span> <span class="o">=&gt;</span><span class="mi">21</span><span class="p">}]</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">select</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="p">[</span><span class="ss">:age</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">}</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">select!</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="p">[</span><span class="ss">:name</span><span class="p">]</span><span class="o">=~</span><span class="sr">/Vic/</span><span class="p">}</span></code></pre></figure>
+
+<p><img src="/images/select.png" alt="select" /></p>
+
+<h1 id="inject">Inject</h1>
+<p>The inject function is the ruby function to foldr/foldl. It receives an array, a starting value (the first value is used in case you don’t give one) and a function/operation. Starting from the value it makes the function/operation with the first item of the array and the starting value, and it passes the result for the next function/operation to do with the next array item, until the end of the array is reached. We can see by the example (‘hello’) that it goes from the left to right.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">inject</span><span class="p">(:</span><span class="o">+</span><span class="p">)</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">inject</span><span class="p">{</span><span class="o">|</span><span class="n">mem</span><span class="p">,</span> <span class="n">item</span><span class="o">|</span> <span class="n">mem</span> <span class="o">&gt;</span> <span class="n">item</span> <span class="p">?</span> <span class="n">mem</span> <span class="p">:</span> <span class="n">item</span> <span class="p">}</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'h'</span><span class="p">,</span><span class="s1">'e'</span><span class="p">,</span><span class="s1">'l'</span><span class="p">,</span><span class="s1">'l'</span><span class="p">,</span><span class="s1">'o'</span><span class="p">]</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">inject</span><span class="p">(</span><span class="s1">''</span><span class="p">,:</span><span class="o">+</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/images/inject.png" alt="inject" /></p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>It’s a really nice tool for a programmer understanding and using high-order functions. It can save you a lot of lines of coding and it’s great for reusing code. In my opinion it makes your code clearer and more elegant. There are languages that this is not possible to do, for instance Java just recently added support to using high-order functions.</p>
+
+
+
+</div>
+
+<div class="pagination">
+  
+    <a href="http://localhost:4000/2015-02-28/sublime-text-editor-tips" class="left arrow">&#8592;</a>
+  
+  
+    <a href="http://localhost:4000/2015-01-30/what-is-regex-how-to-use-it-and-ease-some-tasks" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2017-09-19 22:05:09 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+      </span>
+    </footer>
+  </body>
+</html>

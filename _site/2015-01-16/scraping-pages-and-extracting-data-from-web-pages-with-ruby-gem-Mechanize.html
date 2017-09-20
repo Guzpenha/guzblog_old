@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Scraping pages and extracting data from web pages with ruby gem Mechanize &middot; Guz's blog
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/">
+          <h2 class="nav-title">Guz's blog</h2>
+        </a>
+        <ul>
+          <li><a href="http://localhost:4000/about">About</a></li>
+          <li><a href="/">Posts</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+  <div class="post-info">
+    <span>Written by&nbsp;</span>
+
+    
+      <br>
+      <span>on&nbsp;</span><time datetime="2015-01-16 13:41:00 -0200">January 16, 2015</time>
+    
+  </div>
+
+  <h1 class="post-title">Scraping pages and extracting data from web pages with ruby gem Mechanize</h1>
+  <div class="post-line"></div>
+
+  <p>My most recent internship has taught me some cool things that I want to share with you in this post. One of them is how to make crawlers that go into web pages and get information for you. For this task we used ruby language, relying heavily on the ruby gem <a href="http://www.rubydoc.info/gems/mechanize/Mechanize">Mechanize</a> which is an awesome gem that allows you to make automated iterations with websites as if you were someone browsing the page. You can make ‘post’ and ‘get’ requests, set cookies, set proxies and with the help of Nokogiri - comes along with Mechanize - you can search the html page object for whatever information you might need.</p>
+
+<h1 id="getting-started-with-ruby-mechanize">Getting started with ruby mechanize</h1>
+
+<p>Lets jump right into an example now to see if things get a little more clear. I’ve decided to use <a href="https://www.goodreads.com/">Goodreads</a> website just because I am an avid reader. Lets take look at my <a href="https://www.goodreads.com/user/show/34031187-gustavo-penha">profile</a>, and assume that for some random reason I want get from a profile the books this person has read in the past. Let’s look at this code:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'mechanize'</span>
+
+<span class="n">agent</span> <span class="o">=</span> <span class="no">Mechanize</span><span class="p">.</span><span class="nf">new</span><span class="p">()</span>
+<span class="n">profile_page</span> <span class="o">=</span> <span class="n">agent</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"https://www.goodreads.com/user/show/34031187-gustavo-penha"</span><span class="p">)</span>
+
+<span class="n">read_books_page</span> <span class="o">=</span> <span class="n">profile_page</span><span class="p">.</span><span class="nf">link_with</span><span class="p">(</span><span class="ss">:href</span> <span class="o">=&gt;</span> <span class="sr">/shelf=read/</span> <span class="p">).</span><span class="nf">click</span>
+<span class="c1">#or as an alternative</span>
+<span class="c1">#read_books_page = agent.get(profile_page.search("//a[contains(@href,'shelf=read')]").attr("href"))</span>
+<span class="n">books_read</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">read_books_page</span><span class="p">.</span><span class="nf">search</span><span class="p">(</span><span class="s2">".title&gt;div&gt;a"</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span>
+  <span class="n">books_read</span> <span class="o">&lt;&lt;</span> <span class="n">a</span><span class="p">.</span><span class="nf">text</span><span class="p">()</span>
+<span class="k">end</span>
+<span class="nb">puts</span> <span class="n">books_read</span></code></pre></figure>
+
+<p>The output of this code is all names of the books from page 1 of my profile. If we wanted all the books in the list we should make all ‘next-page’ link clicks simulation while getting the books from each of those pages. Let me explain the code a bit: after using agent.get() to get the profile_page object, I use a mechanize function to find the link I want to follow and simulate a click() to get the read bookshelf page and after that  read_books_page is fetched , a css selector is applied to find the tags where the desired information is inside.</p>
+
+<p>Output of my books in ruby :</p>
+
+<p><img src="/images/out_put_google_scholar.PNG" alt="code output" /></p>
+
+<h1 id="doing-post-requests">Doing post requests</h1>
+
+<p>Let’s suppose you need to login in order to do something. You’ll need to type your account and password, because of that I am using this example so I can show you how to make ‘post’ requests. I am going to login at <a href="https://secure-nikeplus.nike.com/plus/">Orangotag</a> which is a TV-show tracker to known what episode you are, when the next episodes will . After I am logged I could mark episodes as seen there, but I am just going to go on my profile and retrieve the last episodes I’ve seen.</p>
+
+<p>This is the ruby code for that:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	
+<span class="nb">require</span> <span class="s1">'mechanize'</span>
+
+<span class="n">agent</span> <span class="o">=</span> <span class="no">Mechanize</span><span class="p">.</span><span class="nf">new</span><span class="p">()</span>
+<span class="c1">#this get is necessary to get this authencity_token.</span>
+<span class="n">home_page</span> <span class="o">=</span> <span class="n">agent</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"http://orangotag.com/"</span><span class="p">)</span>
+
+<span class="n">agent</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="s2">"http://orangotag.com/account/login"</span><span class="p">,{</span>
+	<span class="ss">:authenticity_token</span><span class="o">=&gt;</span><span class="n">home_page</span><span class="p">.</span><span class="nf">search</span><span class="p">(</span><span class="s2">"//input[@name='authenticity_token']"</span><span class="p">).</span><span class="nf">attr</span><span class="p">(</span><span class="s2">"value"</span><span class="p">).</span><span class="nf">to_s</span><span class="p">,</span>
+	<span class="ss">:login</span><span class="o">=&gt;</span><span class="s2">"Guzpenha"</span><span class="p">,</span>
+	<span class="ss">:password</span><span class="o">=&gt;</span><span class="s2">"this is where my password goes :)"</span><span class="p">,</span>
+	<span class="ss">:commit</span><span class="o">=&gt;</span><span class="s2">"Log in"</span>
+<span class="p">})</span>
+
+<span class="n">home_page_logged</span> <span class="o">=</span> <span class="n">agent</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"http://orangotag.com/"</span><span class="p">)</span>
+<span class="c1">#follow the link to profile page</span>
+<span class="n">my_profile</span><span class="o">=</span> <span class="n">home_page_logged</span><span class="p">.</span><span class="nf">link_with</span><span class="p">(</span><span class="ss">:href</span><span class="o">=&gt;</span> <span class="sr">/user/</span><span class="p">).</span><span class="nf">click</span><span class="p">()</span>
+
+<span class="n">last_seen_tv_episodes</span> <span class="o">=</span><span class="p">[]</span>
+<span class="n">my_profile</span><span class="p">.</span><span class="nf">search</span><span class="p">(</span><span class="s2">"//ul[@class='episode-list square']/li"</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">li</span><span class="o">|</span>
+	<span class="n">last_seen_tv_episodes</span> <span class="o">&lt;&lt;</span> <span class="n">li</span><span class="p">.</span><span class="nf">text</span><span class="p">()</span>
+<span class="k">end</span>
+<span class="nb">puts</span> <span class="n">last_seen_tv_episodes</span></code></pre></figure>
+
+<p>And the output of my recent watched tv shows :</p>
+
+<p><img src="/images/out_put_orangotag.PNG" alt="code output" /></p>
+
+<p>I hope this can be helpful to someone, I think it’s a straightfoward way to gather information on the Web automatically. Its pretty handful in those cases where you have a really big amount of things you need to retrieve. If you want to know anything leave a commentary :)</p>
+
+
+
+</div>
+
+<div class="pagination">
+  
+    <a href="http://localhost:4000/2015-01-30/what-is-regex-how-to-use-it-and-ease-some-tasks" class="left arrow">&#8592;</a>
+  
+  
+    <a href="http://localhost:4000/2015-01-13/my-first-post" class="right arrow">&#8594;</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2017-09-19 22:05:09 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+      </span>
+    </footer>
+  </body>
+</html>
