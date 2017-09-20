@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Are recommendations always good ?- An article a week #3"
+title:  "Are recommendations always good ?"
 date:   2016-05-14 10:00:00
 categories: update
 comments: true

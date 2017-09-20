@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What's behind Amazon's Stream - An article a week #4"
+title:  "What's behind Amazon's Stream"
 date:   2016-10-20 12:00:00
 categories: update
 comments: true

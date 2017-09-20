@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Automatically Learning Programs - An article a week #1"
+title:  "Automatically Learning Programs"
 date:   2016-04-30 12:00:00
 categories: update
 comments: true
