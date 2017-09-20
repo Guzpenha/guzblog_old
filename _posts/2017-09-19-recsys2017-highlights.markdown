@@ -4,6 +4,7 @@ title:  "RecSys 2017 Highlights"
 date:   2017-09-19 10:00:00
 categories: update
 comments: true
+author: "Guz"
 image:
   feature: como.jpg
 ---
