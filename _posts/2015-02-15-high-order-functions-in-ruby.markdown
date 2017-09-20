@@ -26,7 +26,7 @@ a.map!{|x|
 {% endhighlight ruby %}
 
 
-![map](/images/map.png)
+![map]({{ site.baseurl }}/images/map.png)
 
 Select
 ===================================
@@ -38,7 +38,7 @@ a.select{|x| x[:age] > 20}
 a.select!{|x| x[:name]=~/Vic/}
 {% endhighlight ruby %}
 
-![select](/images/select.png)
+![select]({{ site.baseurl }}/images/select.png)
 
 Inject
 ===================================	
@@ -53,7 +53,7 @@ a = ['h','e','l','l','o']
 a.inject('',:+)
 {% endhighlight ruby %}
 
-![inject](/images/inject.png)
+![inject]({{ site.baseurl }}/images/inject.png)
 
 Conclusion
 ==========

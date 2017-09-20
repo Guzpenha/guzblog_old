@@ -23,14 +23,14 @@ It is the intersection of two areas in computer science: [social networks analys
 
 The idea behind is to extract additional information from friends (or people that you trust) in order personalize even more the system. There are two phenomenon studied in SNA which are important to this matter: homophily (people tend to connect with similar people) and social influence (people may modify their behaviour to align with the behaviour of their friends). Both are formalized in Chapter 4: NETWORKS IN THEIR SURROUNDING CONTEXTS from _"Networks, Crowds, and Markets: Reasoning About a Highly Connected World, David Easley and Jon Kleinberg"_.
 
-![SNA_RS](/images/sna_rs.png){: .center-image}
+![SNA_RS]({{ site.baseurl }}/images/sna_rs.png){: .center-image}
 
 He builds the social factor on top of another model called Poisson Factorization (PF) which is a variant of the popular matrix factorization method for recommendation. It is assumed that the number of stars a person gives to an item is sampled from a Poisson distribution, where (similarly to matrix factorization) the rate is a a linear combination of user preference vector and item attributes. The model proposed by the article , Social Poisson Factorization (SPF), adds another component to the Poisson which captures how influenced a person is by each of his friends.  
 
 
-![SPF](/images/SPF.png){: .center-image}
+![SPF]({{ site.baseurl }}/images/SPF.png){: .center-image}
 
 
 They outperformed all other methods in six different datasets, using the NCRR metric. What I did not like is that they reported only the means, without any confidence interval or statistical test. Nonetheless this article is an interesting comparision of methods and it uses social information in a novel probabilistic model.
 
-![SPF](/images/results_spf.png){: .center-image}
+![SPF]({{ site.baseurl }}/images/results_spf.png){: .center-image}

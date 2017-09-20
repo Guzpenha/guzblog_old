@@ -24,7 +24,7 @@ the coauthorship relation when publishing a paper. One great software to visuali
 represents the Scientific Collaboration Network of a prestigious conference here in Brazil called [SBBD][sbbd] accounting for 30 years of publications. The 
 size and the color strength of the edges in this picture are proportional a weight scheme by Newman that measures the intensity of the collaboration between authors.
 
-![SBBD Network](/images/gephi.png)	
+![SBBD Network]({{ site.baseurl }}/images/gephi.png)	
 
 Studying these coauthorship networks might be very insightful,  for example in understanding how distinguished researchers collaborate as well as how Science evolves. 
 One could also use this network to rank researchers in performance and better understand how they connect and influence others. 

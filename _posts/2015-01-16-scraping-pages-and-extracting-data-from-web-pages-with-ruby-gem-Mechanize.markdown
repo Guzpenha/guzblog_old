@@ -36,7 +36,7 @@ The output of this code is all names of the books from page 1 of my profile. If 
 Output of my books in ruby :
 
 
-![code output](/images/out_put_google_scholar.PNG)
+![code output]({{ site.baseurl }}/images/out_put_google_scholar.PNG)
 
 Doing post requests
 =======================
@@ -73,7 +73,7 @@ puts last_seen_tv_episodes
 And the output of my recent watched tv shows :
 
 
-![code output](/images/out_put_orangotag.PNG)
+![code output]({{ site.baseurl }}/images/out_put_orangotag.PNG)
 
 
 I hope this can be helpful to someone, I think it's a straightfoward way to gather information on the Web automatically. Its pretty handful in those cases where you have a really big amount of things you need to retrieve. If you want to know anything leave a commentary :)

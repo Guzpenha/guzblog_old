@@ -11,7 +11,7 @@ image:
 ## Amazon's efforts for personal recommendations
 [Stream](https://www.amazon.com/stream), Amazon's new discovery page, is a visual platform for browsing and discovering new products, directed for users who have no specific intent yet. It learns user preferences and to diversify in order to recommend interesting products, increasing overall users CTR (Click Through Rate). Amazon's Personalization Sciences group is behind this project. They have published this paper at RecSys 2016 and received the Best Paper award in the short papers category.
 
-![stream](/images/amazon_stream.png){: .center-image}
+![stream]({{ site.baseurl }}/images/amazon_stream.png){: .center-image}
 
 The system is divided into three components, an Item Relevance Scorer, a Submodular Diversification Framework and a Category Preference Learner. I'll briefly review them, but you can read the full article [here](http://dl.acm.org/citation.cfm?doid=2959100.2959171).
 
@@ -27,7 +27,7 @@ The global category weights are learned from CTR with additive smoothing, withou
 ## Results
 They have outperformed baselines for the diversifier, the weights of each category learned adaptively from clicks and the personalized weights. The following table summarizes their improvements of CTR over these baselines.
 
-![results_amazon_stream](/images/results_amazon_stream.png){: .center-image}
+![results_amazon_stream]({{ site.baseurl }}/images/results_amazon_stream.png){: .center-image}
 
 
 

@@ -18,16 +18,16 @@ Functionalities and hotkeys
 * Swap lines : ctrl+shift+<up,down>(where you want the line to go).
 * Multiple selections : ctrl+d
 	
-	![first_commands](/images/sublime1.gif)	
+	![first_commands]({{ site.baseurl }}/images/sublime1.gif)	
 
 * Spliting screen : alt+shift+ number_of_splits( how many divisions you want)
 	
-	![split](/images/sublime_split.png)
+	![split]({{ site.baseurl }}/images/sublime_split.png)
 
 * Enable distraction free mode : shift+F11
 * Search on current paste : ctrl+shift+f (you can actually use regex as well which makes it really nice and gives you options to do things like replacing!!)
 
-	![regex_replace](/images/sublime_replace.gif)
+	![regex_replace]({{ site.baseurl }}/images/sublime_replace.gif)
 	
 * Open a file : ctrl+ p + <file_name>
 
@@ -39,7 +39,7 @@ What else can you do
 * Run code directly from it (ctrl+shift+b), you need to configure it to run the language of choice.
 * Use plugins where you can find a lot of extra functionalities, one example is a github plugin which shows you what lines are different from the ones in the repository.
 
-![select](/images/run_code_sublime.png)
+![select]({{ site.baseurl }}/images/run_code_sublime.png)
 
 Conclusion
 ==========

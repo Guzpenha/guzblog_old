@@ -14,7 +14,7 @@ comments: true
 This is the start of a new series in my blog where I try to make a commentary about a computer science article per week.
 I will be selecting articles out of my interest, so expect the following areas to be featured here: recommender systems, machine learning, deep learning, social networks, data mining and information retrieval.
 
-![begins](/images/batman.gif){: .center-image } 
+![begins]({{ site.baseurl }}/images/batman.gif){: .center-image } 
 
 
 ## The first article (Neural Programmer-Interpreters, 2015)
@@ -37,12 +37,12 @@ The problem tackled by this article is learning to __represent and execute probl
 
 The tasks used in the _Experiments_ section are: __addition__ (the model should learn how to do the standard grade school alghoritm), __sorting__ (the model should learn how to sort an array of numbers using [bubblesort](https://en.wikipedia.org/wiki/Bubble_sort){:target="_blank"}) and __canonicalizing 3D car models__ (see figure below from the article).
 
-![car](/images/car_canonicalization.png){: .center-image}
+![car]({{ site.baseurl }}/images/car_canonicalization.png){: .center-image}
 
 
 I will not describe how the model trains or makes inferences, but the results show it to be more accurate in some tasks, as well as able to generalize better (i.e: accuracy can remain 100% while sorting sequences up to a length of 60). I have the impression that, even though the problem in question is an extremely interesting and awesome task, the problems learnt by this recurrenct and compositional neural network are still simple programs, and fail to be accurate on small sizes of input (60 numbers for example in sorting). 
 
-![accuracy_generalization](/images/npi_accuracy.png){: .center-image}
+![accuracy_generalization]({{ site.baseurl }}/images/npi_accuracy.png){: .center-image}
 
 Nonetheless, the article is really interesting, besides acomplishing what I summarized before, NPI can be trained with a fixed core and it is able to learn new programs without forgetting already learned program and it is modeled in a way that the aim is to provide fewer labeled examples, but where they contain richer information so that the model can learn compositional structure. 
 
@@ -52,4 +52,4 @@ This is a step towards achieving real artificial intelligence, which our current
 * [Learning Simple Algorithms from Examples](http://arxiv.org/abs/1511.07275){:target="_blank"}
 * [Neural Programmer: Inducing Latent Programs with Gradient Descent](http://arxiv.org/abs/1511.04834){:target="_blank"}
 
-![car](/images/exmachina.gif){: .center-image}
+![car]({{ site.baseurl }}/images/exmachina.gif){: .center-image}
