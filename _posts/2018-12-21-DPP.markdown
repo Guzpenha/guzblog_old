@@ -17,7 +17,7 @@ In this post I will summarize our recent work “Document Performance Prediction
  
 Query performance prediction is a challenging problem in information retrieval. It concerns predicting the effectiveness of a ranking model when there is no relevance information available. The harder a query might be for the ranking model, the lower the predicted performance should be. Good performance predictors are able to effectively predict the actual performance of the model for the given query, measured by an evaluation metric such as nDCG.
 
-![alt](/images/queryperformanceprediction.png){: .center-image}
+![alt]({{ site.baseurl }}/images/queryperformanceprediction.png){: .center-image}
 
 Potential applications for QPP include selecting the best model depending on query features, combining multiple ranking models and requesting more information for potentially poorly formulated queries. 
 
@@ -25,7 +25,7 @@ Potential applications for QPP include selecting the best model depending on que
 
 In our paper, we study the task of predicting the performance of text classifiers. As our inputs are now documents, we call this novel task as Document Performance Prediction (DPP).
 
-![alt](/images/documentperformanceprediction.png){: .center-image}
+![alt]({{ site.baseurl }}/images/documentperformanceprediction.png){: .center-image}
 
 We adapt and propose several performance predictors for this task, including pre-classification and post-classification (also uses the model predictions). We found that the most successful set of features to predict the performance of several text classifiers (XGBoost, KNN, Naive Bayes, Bert, Broof, RandomForest , SVM, Feedforward neural network) were bagging based ones and the ones based solely on the probability distribution outputs of the classifiers. Both of them are post-classification predictors, and their parallel in QPP (post-retrieval) are also the state-of-the-art in adhoc retrieval effectiveness prediction.
 
