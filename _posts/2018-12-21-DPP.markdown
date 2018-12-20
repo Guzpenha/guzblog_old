@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Document Performance Prediction: predicting effectiveness of text classifers for new documents
+title:  ECIR 2019 paper on Document Performance Prediction
 date:   2018-12-21 10:00:00
 categories: update
 comments: true
