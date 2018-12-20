@@ -39,9 +39,7 @@ We hypothesize that having a high effectiveness in the performance prediction ta
 # Reviews 
 The most unfavorable was the third reviewer, which argues that we should not have used the average effectiveness of the performance predictors over all classifiers, as we should be interested in finding the best performance predictor for a fixed classifier, and not the best performance predictor on average (regarding classifiers). I agree that having a table for each of the M classifiers would be more insightful, by helping us understand which set of performance predictors would be best for each of the classification models (unfortunately we did not find a better way of displaying this information within the space of a short paper). On the other hand, we argue that using the average over classifiers is in fact a good way of comparing the performance predictors, when we are interested in combining multiple classification models with the aid of the performance predictions (as we did in Section 3), they should be robust to predict the performance of the multiple models being combined. That said, the Table 3 was misinterpreted by the reviewer, as we are displaying the metrics for the classification task, where the model is the ensemble that is combining multiple classifiers, which is most likely our fault and we hope that we made this more clear and detailed in the experimental setup for the camera-ready paper.
 
-The evaluations are regarding the following criterias: Relevance to ECIR | Originality of Work | Proposed Method/Solution/Analysis/Application | Methodology, Analysis, and Claims | Adequacy of Background and Citations | Quality of Presentation | Impact of Ideas, Results, Demo|
-
-## -------------------- REVIEW 1 ---------------------
+### Review 1
 
 Recommendation: 1 (Solid work (Accept): I would like to see it accepted.)
 
@@ -49,7 +47,7 @@ Evaluations: 4|3|4|4|3|5|4
 
 This is a very straight-forward paper. The authors in practice evaluate different feature representations for the task of document performance prediction in a text classification scenario. The authors follow a well-established structure e.g. motivation, research questions, experiments and so on. This makes the content easy to understand and follow. While the paper seems to be the first to consider the DPP task on text classification, it does not propose anything new (methods, metrics). Its novelty derives from simply applying the task to a different context. This is not necessarily bad. I feel that this paper acts a starting point for further research, such as "why predictors with high correlations on the document performance prediction task do not necessarily translate into improved text classification" (as the authors mention). At the same time, this paper should insite some research on why certain features work better than others for this specific textual context. In other words, instead of using text classification as simply "another" domain for DPP, I would love to see the application of domain knowledge to the problem. One thing that I am definitely missing, is the 'related work' section. While the authors argue that their work is novel (the application at least), I am confident that some works would be at least tangential (maybe the evaluation of the same features in a slightly different context). In general, the paper is successful in providing what it promises. The research questions are clear and the experiments as well. But due to the lack of a very novel component, I would suggest the authors to spend more time on the "future work" part. I need to be more motivated that this paper is a strong foundation for more interesting things.
 
-## ----------------------- REVIEW 2 ---------------------
+### Review 2
 
 Recommendation: 2 (Exciting (Strong accept): I would fight to get it accepted.)
 
@@ -57,7 +55,7 @@ Evaluations: 4|4|4|4|4|4|4
 
 The authors propose a model for a novel task of Document Performance Prediction (DPP), which is defined as predicting the effectiveness of a text classifier for a given document, when labelled data is not available.  Authors propose several methods inspired by the literature from Query Performance Prediction (QPP) task. Specifically, they propose two methods in Pre-classification DPP setting, where only the document content and corpus statistics are used, and two methods in Post-classification DPP setting, where document content along with classifier's probability outputs are used. Post-classification DPP method outperform their pre-classification counterpart. The paper is generally well-written and easy to follow. I have a few comments, addressed below: 1) In the d-latent method from pre-classification DPP setup, the document representation seems to be a concatenation of pooled token representation. Document in a corpus have different number of tokens, which can result in varied document representation length. How is this handled? 2) In DistBased method from Post-classification DPP, a distance between the document and the category centroid is computed. How is the category centroid computed? It's not clear. Overall, a solid paper tackling an interesting problem.
 
-## ----------------------- REVIEW 3 ---------------------
+### Review 3
 
 Recommendation: 0 (Worthy (Weak accept): Accept if there is room.)
 
