@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How well will our text classifier perform? Using performance prediction to enhance ensembles
+title:  Document Performance Prediction: predicting effectiveness of text classifers for new documents
 date:   2018-12-21 10:00:00
 categories: update
 comments: true
