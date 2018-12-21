@@ -33,6 +33,10 @@ Both of them are post-classification predictors, and their parallel in QPP (post
 
 # Improving classification with effectiveness prediction and ensembling
 
-The expectation that improved QPP techniques would translate to improved retrieval approaches has not yet happened. We studied if we could use DPP in order to improve the classification task itself. We did that by appending the performance predictions (for all models) as additional features in a ensemble that combines the classifiers outputs. Intuitively the stacking layer (we used a Random Forest) might learn to weight the predictions of the classifiers better by using their respectives performance predictions. We expected that predictors with higher correlations, when added as additional features to the ensemble, would lead to higher performance in the classification task. However, only one set of features significantly improved the ensemble performance (the baggind based ones). 
+The expectation that improved QPP techniques would translate to improved retrieval approaches has not yet happened. We studied if we could use DPP in order to improve the classification task itself. We did that by appending the performance predictions (for all models) as additional features in a ensemble that combines the classifiers outputs. 
+
+![alt]({{ site.baseurl }}/images/ensemble_DPP.png){: .center-image}
+
+Intuitively the stacking layer (we used a Random Forest) might learn to weight the predictions of the classifiers better by using their respectives performance predictions. We expected that predictors with higher correlations, when added as additional features to the ensemble, would lead to higher performance in the classification task. However, only one set of features significantly improved the ensemble performance (the baggind based ones). 
 
 We hypothesize that having a high effectiveness in the performance prediction task by means of correlation is not sufficient for a DPP to improve the classification ensemble, as our empirical results corroborate. In the future we plan to study what is necessary in a performance predictor to improve the ensemble effectiveness, and whether there are better ways of evaluating them.
