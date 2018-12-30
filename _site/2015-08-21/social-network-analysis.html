@@ -7,12 +7,12 @@
 
   <title>
     
-      Social Network Analysis &middot; Guz's blog
+      Social Network Analysis &middot; Guz blog
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/guzblog/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 </head>
 
@@ -20,12 +20,13 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
-          <h2 class="nav-title">Guz's blog</h2>
+        <a href="/guzblog/">
+          <h2 class="nav-title">Guz blog</h2>
         </a>
         <ul>
           <li><a href="http://localhost:4000/about">About</a></li>
-          <li><a href="/">Posts</a></li>
+          <li><a href="http://localhost:4000/publications">Publications</a></li>
+          <li><a href="/guzblog/">Posts</a></li>
         </ul>
     </div>
   </nav>
@@ -37,7 +38,7 @@
 
     
       <br>
-      <span>on&nbsp;</span><time datetime="2015-08-21 09:00:00 -0300">August 21, 2015</time>
+      <span>on&nbsp;</span><time datetime="2015-08-21 14:00:00 +0200">August 21, 2015</time>
     
   </div>
 
@@ -58,7 +59,7 @@ the coauthorship relation when publishing a paper. One great software to visuali
 represents the Scientific Collaboration Network of a prestigious conference here in Brazil called <a href="http://dexl.lncc.br/sbbd2015/">SBBD</a> accounting for 30 years of publications. The 
 size and the color strength of the edges in this picture are proportional a weight scheme by Newman that measures the intensity of the collaboration between authors.</p>
 
-<p><img src="/images/gephi.png" alt="SBBD Network" /></p>
+<p><img src="/guzblog/images/gephi.png" alt="SBBD Network" /></p>
 
 <p>Studying these coauthorship networks might be very insightful,  for example in understanding how distinguished researchers collaborate as well as how Science evolves. 
 One could also use this network to rank researchers in performance and better understand how they connect and influence others. 
@@ -75,7 +76,7 @@ use NetworkX. Look at the following example of using NetworkX to calculate a SNA
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">G</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">path_graph</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">r</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">degree_assortativity_coefficient</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="si">%3.1</span><span class="s">f"</span><span class="o">%</span><span class="n">r</span><span class="p">)</span>
-<span class="c">#-0.5</span></code></pre></figure>
+<span class="c1">#-0.5</span></code></pre></figure>
 
 
 
@@ -96,7 +97,7 @@ use NetworkX. Look at the following example of using NetworkX to calculate a SNA
 
     <footer>
       <span>
-        &copy; <time datetime="2017-09-19 22:30:28 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2018-12-31 00:29:13 +0100">2018</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>

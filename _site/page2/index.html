@@ -7,12 +7,12 @@
 
   <title>
     
-      Guz's blog
+      Guz blog
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/guzblog/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 </head>
 
@@ -20,12 +20,13 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
-          <h2 class="nav-title">Guz's blog</h2>
+        <a href="/guzblog/">
+          <h2 class="nav-title">Guz blog</h2>
         </a>
         <ul>
           <li><a href="http://localhost:4000/about">About</a></li>
-          <li><a href="/">Posts</a></li>
+          <li><a href="http://localhost:4000/publications">Publications</a></li>
+          <li><a href="/guzblog/">Posts</a></li>
         </ul>
     </div>
   </nav>
@@ -33,9 +34,22 @@
     <main>
       <div class="catalogue">
   
+    <a href="http://localhost:4000/2016-05-01/an-article-a-week-2" class="catalogue-item">
+      <div>
+        <time datetime="2016-05-01 12:00:00 +0200" class="catalogue-time">May 01, 2016</time>
+        <h1 class="catalogue-title">A probablistic social recommender system</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+          “A probabilistic model for using social networks in personalized item recommendation” This article is related to a topic I’ve studied: considering users social network to enhance the results of...
+        </p>
+
+      </div>
+    </a>
+  
     <a href="http://localhost:4000/2016-04-30/an-article-a-week" class="catalogue-item">
       <div>
-        <time datetime="2016-04-30 09:00:00 -0300" class="catalogue-time">April 30, 2016</time>
+        <time datetime="2016-04-30 14:00:00 +0200" class="catalogue-time">April 30, 2016</time>
         <h1 class="catalogue-title">Automatically Learning Programs</h1>
         <div class="catalogue-line"></div>
 
@@ -48,7 +62,7 @@
   
     <a href="http://localhost:4000/2015-08-21/social-network-analysis" class="catalogue-item">
       <div>
-        <time datetime="2015-08-21 09:00:00 -0300" class="catalogue-time">August 21, 2015</time>
+        <time datetime="2015-08-21 14:00:00 +0200" class="catalogue-time">August 21, 2015</time>
         <h1 class="catalogue-title">Social Network Analysis</h1>
         <div class="catalogue-line"></div>
 
@@ -61,7 +75,7 @@
   
     <a href="http://localhost:4000/2015-03-25/programming-contests-and-online-judges" class="catalogue-item">
       <div>
-        <time datetime="2015-03-25 09:00:00 -0300" class="catalogue-time">March 25, 2015</time>
+        <time datetime="2015-03-25 13:00:00 +0100" class="catalogue-time">March 25, 2015</time>
         <h1 class="catalogue-title">Programming contests and online judges</h1>
         <div class="catalogue-line"></div>
 
@@ -74,25 +88,12 @@
   
     <a href="http://localhost:4000/2015-02-28/sublime-text-editor-tips" class="catalogue-item">
       <div>
-        <time datetime="2015-02-28 09:00:00 -0300" class="catalogue-time">February 28, 2015</time>
+        <time datetime="2015-02-28 13:00:00 +0100" class="catalogue-time">February 28, 2015</time>
         <h1 class="catalogue-title">Sublime text editor tips</h1>
         <div class="catalogue-line"></div>
 
         <p>
           Why sublime? Recently I’ve got in touch with this amazing text editor, and I’ve only coded with it since then. It’s named Sublime and I am really enjoying...
-        </p>
-
-      </div>
-    </a>
-  
-    <a href="http://localhost:4000/2015-02-15/high-order-functions-in-ruby" class="catalogue-item">
-      <div>
-        <time datetime="2015-02-15 10:00:00 -0200" class="catalogue-time">February 15, 2015</time>
-        <h1 class="catalogue-title">High order functions in Ruby</h1>
-        <div class="catalogue-line"></div>
-
-        <p>
-          What are high-order functions? The order of the function is measured by the number of functions received as a parameter or returned. So a function that does not receive...
         </p>
 
       </div>
@@ -115,7 +116,7 @@
 
     <footer>
       <span>
-        &copy; <time datetime="2017-09-19 22:30:28 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2018-12-31 00:29:13 +0100">2018</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>

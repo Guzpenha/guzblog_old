@@ -7,12 +7,12 @@
 
   <title>
     
-      Guz's blog
+      Guz blog
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/guzblog/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 </head>
 
@@ -20,12 +20,13 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
-          <h2 class="nav-title">Guz's blog</h2>
+        <a href="/guzblog/">
+          <h2 class="nav-title">Guz blog</h2>
         </a>
         <ul>
           <li><a href="http://localhost:4000/about">About</a></li>
-          <li><a href="/">Posts</a></li>
+          <li><a href="http://localhost:4000/publications">Publications</a></li>
+          <li><a href="/guzblog/">Posts</a></li>
         </ul>
     </div>
   </nav>
@@ -33,9 +34,22 @@
     <main>
       <div class="catalogue">
   
+    <a href="http://localhost:4000/2015-02-15/high-order-functions-in-ruby" class="catalogue-item">
+      <div>
+        <time datetime="2015-02-15 13:00:00 +0100" class="catalogue-time">February 15, 2015</time>
+        <h1 class="catalogue-title">High order functions in Ruby</h1>
+        <div class="catalogue-line"></div>
+
+        <p>
+          What are high-order functions? The order of the function is measured by the number of functions received as a parameter or returned. So a function that does not receive...
+        </p>
+
+      </div>
+    </a>
+  
     <a href="http://localhost:4000/2015-01-30/what-is-regex-how-to-use-it-and-ease-some-tasks" class="catalogue-item">
       <div>
-        <time datetime="2015-01-30 10:00:00 -0200" class="catalogue-time">January 30, 2015</time>
+        <time datetime="2015-01-30 13:00:00 +0100" class="catalogue-time">January 30, 2015</time>
         <h1 class="catalogue-title">What is Regex? How to use it and ease some tasks</h1>
         <div class="catalogue-line"></div>
 
@@ -48,7 +62,7 @@
   
     <a href="http://localhost:4000/2015-01-16/scraping-pages-and-extracting-data-from-web-pages-with-ruby-gem-Mechanize" class="catalogue-item">
       <div>
-        <time datetime="2015-01-16 13:41:00 -0200" class="catalogue-time">January 16, 2015</time>
+        <time datetime="2015-01-16 16:41:00 +0100" class="catalogue-time">January 16, 2015</time>
         <h1 class="catalogue-title">Scraping pages and extracting data from web pages with ruby gem Mechanize</h1>
         <div class="catalogue-line"></div>
 
@@ -61,7 +75,7 @@
   
     <a href="http://localhost:4000/2015-01-13/my-first-post" class="catalogue-item">
       <div>
-        <time datetime="2015-01-13 14:26:44 -0200" class="catalogue-time">January 13, 2015</time>
+        <time datetime="2015-01-13 17:26:44 +0100" class="catalogue-time">January 13, 2015</time>
         <h1 class="catalogue-title">Yes! My first post</h1>
         <div class="catalogue-line"></div>
 
@@ -87,7 +101,7 @@
 
     <footer>
       <span>
-        &copy; <time datetime="2017-09-19 22:30:28 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2018-12-31 00:29:13 +0100">2018</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>

@@ -7,12 +7,12 @@
 
   <title>
     
-      What is Regex? How to use it and ease some tasks &middot; Guz's blog
+      What is Regex? How to use it and ease some tasks &middot; Guz blog
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/guzblog/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 </head>
 
@@ -20,12 +20,13 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
-          <h2 class="nav-title">Guz's blog</h2>
+        <a href="/guzblog/">
+          <h2 class="nav-title">Guz blog</h2>
         </a>
         <ul>
           <li><a href="http://localhost:4000/about">About</a></li>
-          <li><a href="/">Posts</a></li>
+          <li><a href="http://localhost:4000/publications">Publications</a></li>
+          <li><a href="/guzblog/">Posts</a></li>
         </ul>
     </div>
   </nav>
@@ -37,7 +38,7 @@
 
     
       <br>
-      <span>on&nbsp;</span><time datetime="2015-01-30 10:00:00 -0200">January 30, 2015</time>
+      <span>on&nbsp;</span><time datetime="2015-01-30 13:00:00 +0100">January 30, 2015</time>
     
   </div>
 
@@ -48,11 +49,11 @@
 
 <p>I heard a lot about regular expressions before I first used and I must admit they seemed complex to me. I got interested even though I could not tell what I could use them for. After some classes at UFMG I understood the concept behind it. “A language is said to be regular if there is a <a href="http://en.wikipedia.org/wiki/Finite-state_machine">finite-state machine</a> (FSM) that recognises it”. Knowing that regular expressions, as well as regular grammar, regular languages and fnm are just formalities that can be transformed into each other, we can see an example of them with a state diagram (final states have two borders):</p>
 
-<p><img src="/images/FSM.PNG" alt="code output" /></p>
+<p><img src="/guzblog/images/FSM.PNG" alt="code output" /></p>
 
 <p>Well this FSM accepts any number of ‘0’ higher than just one( ‘A’ is not a final state)  and it can ends with a ‘0’ or any number of ‘1’ (‘Z’ and ‘B’ are final states and B can continue with the transition B-&gt;B with a ‘1’). To test Regex I use this awesome site <a href="http://www.regexr.com/">Regexr</a> that highlights the entries that would give a match(or a part of them that would). So the word ‘00001111’ or ‘1111’ would match, however ‘10000’ or ‘000010’ would not (see that regex breaks into two strings that matches because of global flag).The corresponding regex would be like this:</p>
 
-<p><img src="/images/regex.PNG" alt="regex0" /></p>
+<p><img src="/guzblog/images/regex.PNG" alt="regex0" /></p>
 
 <h1 id="the-syntax">The syntax</h1>
 <p>I struggled to understand how to write regex, but you get used to it. I’m going to explain here what I find useful. In the example before I used 3 tokens from regex:</p>
@@ -98,7 +99,7 @@ Congratulations to the winners of the StarLadder Season 11 LAN Finals! 359 comme
 
 <p>I’ve made two groups, one for the title ($1) and another one for comments ($2), the output of running the script today is:</p>
 
-<p><img src="/images/output_reddit.PNG" alt="output reddit" /></p>
+<p><img src="/guzblog/images/output_reddit.PNG" alt="output reddit" /></p>
 
 <h1 id="using-regex-to-replaceremove-parts-of-the-string">Using Regex to replace/remove parts of the string</h1>
 <p><a href="http://www.sublimetext.com/">Sublime</a> - a really nice text editor - has the option to use Regex expressions in replacing(ctrl+h) . In Ruby, gsub() accepts a regex as a first parameter and the thing you want to replace it for as a second parameter. I use both constantly, as I handle a lot of messy inputs from the web.</p>
@@ -127,7 +128,7 @@ Congratulations to the winners of the StarLadder Season 11 LAN Finals! 359 comme
 <h1 id="conclusion">Conclusion</h1>
 <p>It goes without saying that I use Regex a lot in my code,  It really saves me time. Of course that purely programming we can achieve the same processing power that a Regex has, after all, regular expressions are the first set of Chomsky hierarchy- regular -, and programming languages are equivalent to turing’s machine ( recursively enumerable languages being a formality for it).</p>
 
-<p><img src="/images/chomsky_hierarchy.png" alt="chosky hierarchy" /></p>
+<p><img src="/guzblog/images/chomsky_hierarchy.png" alt="chosky hierarchy" /></p>
 
 <p>There are a lot of uses for regular expressions, such as matching RGB colors, Validating URLS and Emails, Phone Numbers, IP Address, etc. On <a href="http://www.regexr.com/">Regexr</a> you can see under the ‘Community ‘ tab, a lot of them ordered by reviews. To conclude I just want to add that the FSM image was taken from Newton José Vieira handout.</p>
 
@@ -150,7 +151,7 @@ Congratulations to the winners of the StarLadder Season 11 LAN Finals! 359 comme
 
     <footer>
       <span>
-        &copy; <time datetime="2017-09-19 22:30:28 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2018-12-31 00:29:13 +0100">2018</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>

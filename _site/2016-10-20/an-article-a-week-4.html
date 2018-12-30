@@ -7,12 +7,12 @@
 
   <title>
     
-      What's behind Amazon's Stream &middot; Guz's blog
+      What's behind Amazon's Stream &middot; Guz blog
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/guzblog/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 </head>
 
@@ -20,12 +20,13 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
-          <h2 class="nav-title">Guz's blog</h2>
+        <a href="/guzblog/">
+          <h2 class="nav-title">Guz blog</h2>
         </a>
         <ul>
           <li><a href="http://localhost:4000/about">About</a></li>
-          <li><a href="/">Posts</a></li>
+          <li><a href="http://localhost:4000/publications">Publications</a></li>
+          <li><a href="/guzblog/">Posts</a></li>
         </ul>
     </div>
   </nav>
@@ -37,7 +38,7 @@
 
     
       <br>
-      <span>on&nbsp;</span><time datetime="2016-10-20 10:00:00 -0200">October 20, 2016</time>
+      <span>on&nbsp;</span><time datetime="2016-10-20 14:00:00 +0200">October 20, 2016</time>
     
   </div>
 
@@ -47,7 +48,7 @@
   <h2 id="amazons-efforts-for-personal-recommendations">Amazon’s efforts for personal recommendations</h2>
 <p><a href="https://www.amazon.com/stream">Stream</a>, Amazon’s new discovery page, is a visual platform for browsing and discovering new products, directed for users who have no specific intent yet. It learns user preferences and to diversify in order to recommend interesting products, increasing overall users CTR (Click Through Rate). Amazon’s Personalization Sciences group is behind this project. They have published this paper at RecSys 2016 and received the Best Paper award in the short papers category.</p>
 
-<p><img src="/images/amazon_stream.png" alt="stream" class="center-image" /></p>
+<p><img src="/guzblog/images/amazon_stream.png" alt="stream" class="center-image" /></p>
 
 <p>The system is divided into three components, an Item Relevance Scorer, a Submodular Diversification Framework and a Category Preference Learner. I’ll briefly review them, but you can read the full article <a href="http://dl.acm.org/citation.cfm?doid=2959100.2959171">here</a>.</p>
 
@@ -63,7 +64,7 @@
 <h2 id="results">Results</h2>
 <p>They have outperformed baselines for the diversifier, the weights of each category learned adaptively from clicks and the personalized weights. The following table summarizes their improvements of CTR over these baselines.</p>
 
-<p><img src="/images/results_amazon_stream.png" alt="results_amazon_stream" class="center-image" /></p>
+<p><img src="/guzblog/images/results_amazon_stream.png" alt="results_amazon_stream" class="center-image" /></p>
 
 
 
@@ -84,7 +85,7 @@
 
     <footer>
       <span>
-        &copy; <time datetime="2017-09-19 22:30:28 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2018-12-31 00:29:13 +0100">2018</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>

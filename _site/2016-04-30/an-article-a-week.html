@@ -7,12 +7,12 @@
 
   <title>
     
-      Automatically Learning Programs &middot; Guz's blog
+      Automatically Learning Programs &middot; Guz blog
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/guzblog/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 </head>
 
@@ -20,12 +20,13 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
-          <h2 class="nav-title">Guz's blog</h2>
+        <a href="/guzblog/">
+          <h2 class="nav-title">Guz blog</h2>
         </a>
         <ul>
           <li><a href="http://localhost:4000/about">About</a></li>
-          <li><a href="/">Posts</a></li>
+          <li><a href="http://localhost:4000/publications">Publications</a></li>
+          <li><a href="/guzblog/">Posts</a></li>
         </ul>
     </div>
   </nav>
@@ -37,7 +38,7 @@
 
     
       <br>
-      <span>on&nbsp;</span><time datetime="2016-04-30 09:00:00 -0300">April 30, 2016</time>
+      <span>on&nbsp;</span><time datetime="2016-04-30 14:00:00 +0200">April 30, 2016</time>
     
   </div>
 
@@ -49,30 +50,29 @@
 <p>This is the start of a new series in my blog where I try to make a commentary about a computer science article per week.
 I will be selecting articles out of my interest, so expect the following areas to be featured here: recommender systems, machine learning, deep learning, social networks, data mining and information retrieval.</p>
 
-<p><img src="/images/batman.gif" alt="begins" class="center-image" /></p>
+<p><img src="/guzblog/images/batman.gif" alt="begins" class="center-image" /></p>
 
 <h2 id="the-first-article-neural-programmer-interpreters-2015">The first article (Neural Programmer-Interpreters, 2015)</h2>
 
 <p>The article I choose is <strong>Neural Programmer-Interpreters</strong> by Scott Reed and Nando de freitas from Google DeepMind, it can be read <a href="http://arxiv.org/abs/1511.06279" target="_blank">here</a>. For the interested in the bibtex, here it goes:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@article{reed2015neural,
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{reed2015neural,
   title={Neural Programmer-Interpreters},
   author={Reed, Scott and de Freitas, Nando},
   journal={arXiv preprint arXiv:1511.06279},
   year={2015}
 }
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The problem tackled by this article is learning to <strong>represent and execute problems automatically</strong>, which is closely related to program induction, i.e. inducing a program given example input and ouput pairs. They propose a recurrent and compositional neural network in order to do that. In their experiments,  NPI (Neural Programmer-Interpreter) architecture learns 21 programs, claiming at the same time a higher generalization power then other <a href="https://en.wikipedia.org/wiki/Long_short-term_memory" target="_blank">LSTMs</a>. Other works follow this idea in the literature, however <em>reed2015neural</em> differ by incorporating compositional structure into the network using program memory. This means that the model can learn new programs by combining sub-programs.</p>
 
 <p>The tasks used in the <em>Experiments</em> section are: <strong>addition</strong> (the model should learn how to do the standard grade school alghoritm), <strong>sorting</strong> (the model should learn how to sort an array of numbers using <a href="https://en.wikipedia.org/wiki/Bubble_sort" target="_blank">bubblesort</a>) and <strong>canonicalizing 3D car models</strong> (see figure below from the article).</p>
 
-<p><img src="/images/car_canonicalization.png" alt="car" class="center-image" /></p>
+<p><img src="/guzblog/images/car_canonicalization.png" alt="car" class="center-image" /></p>
 
 <p>I will not describe how the model trains or makes inferences, but the results show it to be more accurate in some tasks, as well as able to generalize better (i.e: accuracy can remain 100% while sorting sequences up to a length of 60). I have the impression that, even though the problem in question is an extremely interesting and awesome task, the problems learnt by this recurrenct and compositional neural network are still simple programs, and fail to be accurate on small sizes of input (60 numbers for example in sorting).</p>
 
-<p><img src="/images/npi_accuracy.png" alt="accuracy_generalization" class="center-image" /></p>
+<p><img src="/guzblog/images/npi_accuracy.png" alt="accuracy_generalization" class="center-image" /></p>
 
 <p>Nonetheless, the article is really interesting, besides acomplishing what I summarized before, NPI can be trained with a fixed core and it is able to learn new programs without forgetting already learned program and it is modeled in a way that the aim is to provide fewer labeled examples, but where they contain richer information so that the model can learn compositional structure.</p>
 
@@ -84,7 +84,7 @@ I will be selecting articles out of my interest, so expect the following areas t
   <li><a href="http://arxiv.org/abs/1511.04834" target="_blank">Neural Programmer: Inducing Latent Programs with Gradient Descent</a></li>
 </ul>
 
-<p><img src="/images/exmachina.gif" alt="car" class="center-image" /></p>
+<p><img src="/guzblog/images/exmachina.gif" alt="car" class="center-image" /></p>
 
 
 </div>
@@ -104,7 +104,7 @@ I will be selecting articles out of my interest, so expect the following areas t
 
     <footer>
       <span>
-        &copy; <time datetime="2017-09-19 22:30:28 -0300">2017</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2018-12-31 00:29:13 +0100">2018</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>
