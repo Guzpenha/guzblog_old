@@ -2,7 +2,7 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Guz's blog
+title:          Guz blog
 paginate:       5
 baseurl:        "/guzblog"
 url:            "https://guzpenha.github.io/guzblog"
