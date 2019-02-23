@@ -7,7 +7,7 @@ permalink: /publications/
 
 # 2019
 
-* **Gustavo Penha**, Raphael Campos, Sérgio Canuto, Marcos Goncalves and Rodrygo Santos. _Document Performance Prediction for Automatic Text Classification_. ECIR [[pdf](){:target="_blank"}] [[slides](){:target="_blank"}]
+* **Gustavo Penha**, Raphael Campos, Sérgio Canuto, Marcos Goncalves and Rodrygo Santos. _Document Performance Prediction for Automatic Text Classification_. ECIR [[pdf](https://homepages.dcc.ufmg.br/~rodrygo/wp-content/papercite-data/pdf/penha2019ecir.pdf){:target="_blank"}] [[slides](){:target="_blank"}]
 
 
 # 2018
