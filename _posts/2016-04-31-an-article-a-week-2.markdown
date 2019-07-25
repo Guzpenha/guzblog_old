@@ -4,6 +4,7 @@ title:  "A probablistic social recommender system"
 date:   2016-04-31 12:00:00
 categories: update
 comments: true
+published: false
 ---
 
 ## _"A probabilistic model for using social networks in personalized item recommendation"_
