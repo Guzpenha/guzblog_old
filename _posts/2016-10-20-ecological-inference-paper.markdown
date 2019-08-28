@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My article about Ecological Inference methods on social data on SBBD 2016"
+title:  "SBBD'16 Ecological Inference methods on social data"
 date:   2016-10-20 10:00:00
 categories: update
 comments: true

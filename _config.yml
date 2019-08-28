@@ -2,10 +2,10 @@
 permalink:      /:year-:month-:day/:title
 
 # Setup
-title:          Guz blog
+title:          Gustavo Penha
 paginate:       5
-baseurl:        "/guzblog"
-url:            "https://guzpenha.github.io/guzblog"
+# baseurl:        "/guzblog"
+# url:            "https://guzpenha.github.io/guzblog"
 
 # Assets
 sass:

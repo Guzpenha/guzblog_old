@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Publications"
-author: "Guz"
+author: "Gustavo Penha"
 permalink: /publications/
 ---
 

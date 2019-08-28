@@ -7,12 +7,12 @@
 
   <title>
     
-      RecSys 2017 Highlights &middot; Guz blog
+      RecSys'17 Highlights &middot; Gustavo Penha
     
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/guzblog/styles.css">
+  <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
 </head>
 
@@ -20,13 +20,13 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
-        <a href="/guzblog/">
-          <h2 class="nav-title">Guz blog</h2>
+        <a href="/">
+          <h2 class="nav-title">Gustavo Penha</h2>
         </a>
         <ul>
-          <li><a href="http://localhost:4000/about">About</a></li>
+          <li><a href="/">Posts</a></li>
           <li><a href="http://localhost:4000/publications">Publications</a></li>
-          <li><a href="/guzblog/">Posts</a></li>
+          <li><a href="http://localhost:4000/about">About</a></li>
         </ul>
     </div>
   </nav>
@@ -34,7 +34,7 @@
     <main>
       <div class="post">
   <div class="post-info">
-    <span>Written by&nbsp;</span>Guz
+    <!-- <span>Written by&nbsp;</span>Gustavo Penha -->
 
     
       <br>
@@ -42,7 +42,7 @@
     
   </div>
 
-  <h1 class="post-title">RecSys 2017 Highlights</h1>
+  <h1 class="post-title">RecSys'17 Highlights</h1>
   <div class="post-line"></div>
 
   <!-- ![alt](/images/image.png){: .center-image}  -->
@@ -83,11 +83,11 @@
 
 <p><strong><a href="http://dl.acm.org/citation.cfm?id=3109896">Personalizing Session-based Recommendations with Hierarchical Recurrent Neural Networks</a>:</strong>Authors in this paper extend related work by adding an extra component on RNN Session-based Recommenders that captures users profiles and information between sessions. The idea is to use a hierarchical architecture that model cross-sessions iterations by adding another RNN between user sessions, which is capable of capturing the evolution of the user across sessions and providing personalization capabilities. Their results show that the proposed approach is better than baselines and state-of-the-art RNNs that are not sensitive to cross sessions interactions and the ones where user sessions are concatenated.</p>
 
-<p><img src="/guzblog/images/recsys2017/4.png" alt="alt" class="center-image" /></p>
+<p><img src="/images/recsys2017/4.png" alt="alt" class="center-image" /></p>
 
 <p><strong><a href="https://doi.org/10.1145/3109859.3109917">Modeling User Session and Intent with an Attention-based Encoder-Decoder Architecture</a>:</strong> Loyola et al proposed an encoder-decoder architecture for the problem of predicting which item will be seen next for a user during a session and whether he has the intention to purchase an item or not. Inspired by recent encoder-decoder approaches in machine translation, the proposed model that is a bidirectional RNN as the encoder and a normal RNN as the decoder, and authors added alignment (passing labels as well as predictions to the next time state) and attention (encapsulating expressive portions of the source sequence in a separate block) mechanisms as well.</p>
 
-<p><img src="/guzblog/images/recsys2017/5.png" alt="alt" class="center-image" /></p>
+<p><img src="/images/recsys2017/5.png" alt="alt" class="center-image" /></p>
 
 <p><strong><a href="https://doi.org/10.1145/3109859.3109872">When Recurrent Neural Networks meet the Neighborhood for Session-Based Recommendation</a>:</strong> This paper makes shows how the state-of-the-art is still not well defined for session-based recommenders. Authors point for example that GRU4REC was evaluated on a proprietary protocol, making it hard to reproduce its results. They compare the proposed heuristic-based algorithm, that uses the most similar sessions to provide recommendations using a similarity measure to predict next items on the session, with GRU4REC and a hybrid of both. Jannach et al found that the nearest-neighbor scheme performed better in multiple datasets, and the hybridization of both recommenders could improve results, even more, capturing both co-occurrence and sequential signals in the data.</p>
 
@@ -111,17 +111,17 @@
     <a href="http://localhost:4000/2018-12-21/DPP" class="left arrow">&#8592;</a>
   
   
-    <a href="http://localhost:4000/2016-10-20/an-article-a-week-4" class="right arrow">&#8594;</a>
+    <a href="http://localhost:4000/2016-10-20/ecological-inference-paper" class="right arrow">&#8594;</a>
   
 
-  <a href="#" class="top">Top</a>
+  <!-- <a href="#" class="top">Top</a> -->
 </div>
 
     </main>
 
     <footer>
       <span>
-        &copy; <time datetime="2018-12-31 00:29:13 +0100">2018</time> Gustavo Penha. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+        &copy; <time datetime="2019-08-28 15:42:48 +0200">2019</time> Gustavo Penha. <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
       </span>
     </footer>
   </body>

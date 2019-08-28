@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "RecSys 2017 Highlights"
+title:  "RecSys'17 Highlights"
 date:   2017-09-19 10:00:00
 categories: update
 comments: true
-author: "Guz"
+author: "Gustavo Penha"
 image:
   feature: como.jpg
 ---
