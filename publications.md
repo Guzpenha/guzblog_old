@@ -14,7 +14,7 @@ permalink: /publications/
 
 # 2018
 
-* **Gustavo Penha**, Rodrygo Santos. _Performance prediction for enhancing ensemble learning_. Master thesis. [[pdf](http://www.bibliotecadigital.ufmg.br/dspace/bitstream/handle/1843/ESBF-B5EQGD/gustavopenha.pdf?sequence=1){:target="_blank"}] [[slides](https://drive.google.com/open?id=1aCY-3ugo3EcGvM3X1gtYPMDdoal1GNNq){:target="_blank"}]
+* **Gustavo Penha**, Rodrygo Santos. _Performance prediction for enhancing ensemble learning_. Master thesis. [[pdf](https://drive.google.com/open?id=1ScGA8EASeQbJvOLXJTBY77_zJNF0kspx){:target="_blank"}] [[slides](https://drive.google.com/open?id=1aCY-3ugo3EcGvM3X1gtYPMDdoal1GNNq){:target="_blank"}]
 
 # 2017
 
