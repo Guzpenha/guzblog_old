@@ -5,7 +5,12 @@ author: "Gustavo Penha"
 permalink: /publications/
 ---
 
+# 2020
+* **Gustavo Penha**, Claudia Hauff. _Curriculum Learning Strategies for IR: An Empirical Study on Conversation Response Ranking._ ECIR [[preprint](https://arxiv.org/abs/1912.08555){:target="_blank"}] [[code](https://github.com/Guzpenha/transformers_cl){:target="_blank"}]
+
 # 2019
+
+* **Gustavo Penha**, Alexandru Balan, Claudia Hauff. _Introducing MANtIS: a novel Multi-Domain Information Seeking Dialogues Dataset._ Arxiv [[preprint](https://arxiv.org/abs/1912.04639){:target="_blank"}] [[dataset](https://guzpenha.github.io/MANtIS/){:target="_blank"}] [[code](https://github.com/Guzpenha/MANtIS){:target="_blank"}]
 
 * Bruno L. Pereira, Alberto Ueda, **Gustavo Penha**, Rodrygo Santos and Nivio Ziviani. _Online Learning to Rank for Sequential Music Recommendation_. RecSys [[pdf](https://homepages.dcc.ufmg.br/~rodrygo/wp-content/papercite-data/pdf/pereira2019recsys.pdf){:target="_blank"}]
 
