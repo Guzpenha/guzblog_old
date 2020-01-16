@@ -5,11 +5,6 @@ title: publications
 description: Publications in reversed chronological order.
 ---
 
-<!-- {% for y in page.years %}
-  <h3 class="year">{{y}}</h3>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
-{% endfor %} -->
-
 <h3 class="year">2020</h3> 
 * **Gustavo Penha**, Claudia Hauff. _Curriculum Learning Strategies for IR: An Empirical Study on Conversation Response Ranking._ ECIR [[preprint](https://arxiv.org/abs/1912.08555){:target="_blank"}] [[code](https://github.com/Guzpenha/transformers_cl){:target="_blank"}]
 
