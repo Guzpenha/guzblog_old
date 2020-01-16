@@ -1,44 +1,52 @@
 .pagination {
-  border-top: .5px solid $grey-2;
-  font-family: $palatino;
-  padding-top: 2rem;
-  position: relative;
+  font-size: 1rem;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
   text-align: center;
+}
 
-  span {
-    color: $default-shade;
-    font-size: 1.1rem;
-  }
+.pagination a, .pagination .disabled {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  background: #fafafa;
+  border-radius: 0.1875em;
+  border: 1px solid #f3f3f3;
+  color: #333333;
+  padding: 1em 1.5em;
+}
 
-  .top {
-    @include transition(all .3s ease-out);
-    color: $default-color;
-    font-family: $sans-font;
-    font-size: 1.1rem;
-    opacity: .6;
+.pagination .disabled, .pagination .pagination-meta {
+  opacity: 0.5;
+}
 
-    &:hover {
-      opacity: 1;
-    }
-  }
+.pagination .pagination-meta {
+  overflow: hidden;
+}
 
-  .arrow {
-    @include transition(all .3s ease-out);
-    color: $default-color;
-    position: absolute;
+.pagination a:hover, .pagination a:focus {
+  background: white;
+  color: $theme-color;
+}
 
-    &:hover,
-    &:focus {
-      opacity: .6;
-      text-decoration: none;
-    }
-  }
+.pagination a:active {
+  background: #f7f7f7;
+}
 
-  .left {
-    left: 0;
-  }
+.pagination .button {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
 
-  .right {
-    right: 0;
-  }
+.button-disabled {
+  opacity: 0.55;
+  background-color: #999;
+}
+
+.button-disabled:hover,
+.button-disabled:active,
+.button-disabled:focus {
+  cursor: not-allowed;
+  background-color: #999;
 }

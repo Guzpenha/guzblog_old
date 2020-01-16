@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Gustavo Penha | RecSys'17 Highlights</title>
+  <meta name="description" content="">
+
+  
+
+  <link rel="shortcut icon" href="http://localhost:4000/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/2017/recsys2017-highlights/">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+        
+        <strong>Gustavo</strong> Penha
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="http://localhost:4000/">about</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="http://localhost:4000/blog/">blog</a>
+
+        <!-- Pages -->
+        
+          
+        
+          
+        
+          
+        
+          
+            <a class="page-link" href="http://localhost:4000/publications/">publications</a>
+          
+        
+          
+        
+          
+        
+          
+        
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="http://localhost:4000/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">RecSys'17 Highlights</h1>
+    <p class="post-meta">September 19, 2017 • Gustavo Penha</p>
+  </header>
+
+  <article class="post-content">
+    <!-- ![alt](/images/image.png){: .center-image}  -->
+
+<p>In this post I will give my personal thoughts on some articles from 2017 ACM Conference on Recommender Systems, that I chose out of my own interest, with no specific order, divided by recent trends in the area. If you believe I misunderstood any of the papers please correct me. The main topics covered are:</p>
+
+<ul>
+  <li>Explanations and Model Interpretability</li>
+  <li>Deep Learning and Session-Based RS</li>
+  <li>Gap between academia and industry</li>
+</ul>
+
+<h1 id="explanations-and-model-interpretability">Explanations and Model Interpretability</h1>
+
+<p><strong><a href="http://dl.acm.org/citation.cfm?id=3109859.3109915">User Preferences for Hybrid Explanations</a>:</strong> Authors compare different types of explanations - obtained from different sources in a hybrid recommender such as contextual, social, item-based or user-based - and different visualizations - natural language, rule-based and graphical visualizations such as Venn diagrams - in order to understand which presentation styles improve users experience. Their results show that  Venn diagrams outperforms other types of explanations, but are hard to expand for three or more sources of information. Other dimensions did not show a statistically significant difference for user experience in their experiments.</p>
+
+<!-- ![alt](/images/recsys2017/1.png){: .center-image} -->
+
+<p><strong><a href="http://dl.acm.org/citation.cfm?id=3109913">Using Explainability for Constrained Matrix Factorization</a>:</strong> Adbollahi proposes a Matrix Factorization model that has explainability constraints, meaning that it is able to generate accurate predictions while still being able to make explanations using no additional data source (only the rating matrix). This is obtained by regularizing the loss function with the addition of a term that represents how explainable predictions are (amount of user-based neighbors or item-based neighbors). Experiments show that EMF (Explainable-Matrix Factorization) is able to generate more explainable recommendations while maintaining the accuracy of MF.</p>
+
+<!-- ![alt](/images/recsys2017/2.png){: .center-image} -->
+
+<p><strong><a href="http://dl.acm.org/citation.cfm?id=3109911">Folding: Why Good Models Sometimes Make Spurious Recommendations</a>:</strong> This paper is a really interesting read, it studies why sometimes matrix factorization methods make really bad recommendations in top-K results. It introduces a new metric to measure the effect of folding, which authors claim to be a major contributing factor to such spurious recommendations. Authors define folding as the phenomenon in which disparate groups are collapsed onto the same region in the embedding space. For example, users who are children having projections in embedding space (from matrix factorization ) really close to horror films, even though there is no data supporting such closeness.</p>
+
+<!-- ![alt](/images/recsys2017/3.png){: .center-image} -->
+
+<p>Xin et. al also argue that folding happens when the model assigns high affinity to unrelated missing data. This is related to the fact that a model has to be able to discern why a user-item-rating is missing from the observations. The Missing Not At Random (MNAR) says that not all missing data have an equal likelihood of being unobserved (there is a set of items that some users will most likely never consume, and another set of items that users might eventually consume). Considering that the density of ratings in datasets is really small, the MNAR principle has to be taken into account to avoid such spurious recommendations.</p>
+
+<p><strong><a href="http://dl.acm.org/citation.cfm?id=3109888">Evaluating Decision-Aware Recommender Systems</a>:</strong> This paper explores recommender systems that decide whether they should make a recommendation or not, based on their confidence of their recommendations. They propose two ways of measuring such confidence: support (number of neighbors that participated in the computation) in the case of nearest-neighbors algorithms and uncertainty (sd of the predictions) in the case of Probabilistic Matrix Factorization.  Experimental results show that their proposed decision-aware recommenders improve accuracy at the expense of item and user coverage. This is another step into better understanding recommender systems errors and assumptions when making spurious recommendations.</p>
+
+<h1 id="deep-learning-and-session-based-rs">Deep Learning and Session-Based RS</h1>
+
+<p>First I will talk about DLRS, which is the second workshop on DL (Deep Learning) for recommender systems, and then I will dive into some papers regarding session-based recommenders.  The first set of <a href="https://www.slideshare.net/balazshidasi/deep-learning-in-recommender-systems-recsys-summer-school-2017">slides</a> from @balazshidasi  is an introduction to deep learning, explaining what it is/is not able to do,  and why it is receiving so much attention now. The main contributing factors to its success can be divided into three factors: computational power (GPU), more data and research breakthroughs.</p>
+
+<p>Even though deep learning has had impressive results recently, it is not the answer to every problem in machine learning as it has its limitations. So how could we use such concepts in recommender systems? Balázs argues that DL has a potential for feature extraction directly from content (from images or text for example), modeling dynamic behavior with RNNs and generating more accurate representations of users and items.</p>
+
+<p>He points <a href="http://dl.acm.org/citation.cfm?id=3109953&amp;CFID=809538421&amp;CFTOKEN=66805074">here</a> to the state of the art when using neural networks in recommender systems: embeddings &amp; 2vec models, extracting features from different data domains, deep models for collaborative filtering, autoencoders for collaborative filtering and session-based recommendations with RNNs. Exploring different approaches and architectures of deep models in the context of recommender systems is a promising research area.</p>
+
+<p><strong><a href="http://dl.acm.org/citation.cfm?id=3109896">Personalizing Session-based Recommendations with Hierarchical Recurrent Neural Networks</a>:</strong>Authors in this paper extend related work by adding an extra component on RNN Session-based Recommenders that captures users profiles and information between sessions. The idea is to use a hierarchical architecture that model cross-sessions iterations by adding another RNN between user sessions, which is capable of capturing the evolution of the user across sessions and providing personalization capabilities. Their results show that the proposed approach is better than baselines and state-of-the-art RNNs that are not sensitive to cross sessions interactions and the ones where user sessions are concatenated.</p>
+
+<p><img src="/images/recsys2017/4.png" alt="alt" class="center-image" /></p>
+
+<p><strong><a href="https://doi.org/10.1145/3109859.3109917">Modeling User Session and Intent with an Attention-based Encoder-Decoder Architecture</a>:</strong> Loyola et al proposed an encoder-decoder architecture for the problem of predicting which item will be seen next for a user during a session and whether he has the intention to purchase an item or not. Inspired by recent encoder-decoder approaches in machine translation, the proposed model that is a bidirectional RNN as the encoder and a normal RNN as the decoder, and authors added alignment (passing labels as well as predictions to the next time state) and attention (encapsulating expressive portions of the source sequence in a separate block) mechanisms as well.</p>
+
+<p><img src="/images/recsys2017/5.png" alt="alt" class="center-image" /></p>
+
+<p><strong><a href="https://doi.org/10.1145/3109859.3109872">When Recurrent Neural Networks meet the Neighborhood for Session-Based Recommendation</a>:</strong> This paper makes shows how the state-of-the-art is still not well defined for session-based recommenders. Authors point for example that GRU4REC was evaluated on a proprietary protocol, making it hard to reproduce its results. They compare the proposed heuristic-based algorithm, that uses the most similar sessions to provide recommendations using a similarity measure to predict next items on the session, with GRU4REC and a hybrid of both. Jannach et al found that the nearest-neighbor scheme performed better in multiple datasets, and the hybridization of both recommenders could improve results, even more, capturing both co-occurrence and sequential signals in the data.</p>
+
+<h1 id="gap-between-academia-and-industry">Gap between academia and industry</h1>
+
+<p><strong><a href="http://dl.acm.org/citation.cfm?doid=3109859.3109919">Rethinking Collaborative Filtering: A Practical Perspective on State-of-the-art Research Based on Real World Insights</a>:</strong> Koenigstein refers to his previous paper “The list recommendation problem”, where a more appropriate task - which better relates to real-world recommenders goal - is proposed, the list recommendation problem: given a specific user u, the goal is to produce an ordered personalized list l of K items that maximize the probability that u will click on an item from l. He argues that using such formulation, there is no trade-off between accuracy and diversity, as the model will automatically learn the right amount of diversity needed.</p>
+
+<p>Another point that he makes is that the trade-off between accuracy and novelty is a product of traditional CF models trying to predict the next item the user will buy, instead of optimizing for the real goal of most real-world systems, which is to influence the user to consume more items. As CF models output consists of many popular items that users would most likely consume regardless of the recommendations, current systems are failing to actually influence users behavior. He argues that a combination of CF models (which are great at learning tastes by learning embeddings of tastes) and Reinforcement Learning - which optimizes a reward function based on interactions with the system - will be the future of recommender systems.</p>
+
+<p>Finally, he talks about the problem of evaluating RS, which in an offline setup has evolved from RMSE to other formulations such as rankings is very different from online experiments which are expensive and time-consuming (and sometimes impossible in academic research). This is definitively an open research area, and Koenigstein points to promising research “Learning from logged implicit exploration data” trying to mitigate this problem.</p>
+
+<p><strong><a href="http://dl.acm.org/citation.cfm?doid=3109859.3109922">Déjà Vu: The Importance of Time and Causality in Recommender Systems</a>:</strong> This was a talk given by @JustinBasilico on how important time is for recommenders at Netflix. He stresses that handling time in offline academic experiments is different from production systems such as Netflix. From slides we can see that Basilico explores the importance of time in various contexts: during data collection and evaluation procedures, recommender algorithms that use time in their model, models learning, and recommender systems that change over time (UX, recommender algorithms, feedback loops), and during the interaction with the system, so users need less time to find something great to watch.</p>
+
+<p>This is a nice reminder that evaluation procedures and methodology in academia should take into account time, for example splitting data for training models and testing them using a fixed date cut instead of user-wise.</p>
+
+  </article>
+
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'guzpenha';
+      var disqus_identifier = '/blog/2017/recsys2017-highlights';
+      var disqus_title      = "RecSys'17 Highlights";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2020 Gustavo Penha.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+
+    
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="http://localhost:4000/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="http://localhost:4000/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.min.css">
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-XXXXXXXXX', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+
+</html>
