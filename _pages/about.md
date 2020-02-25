@@ -16,7 +16,7 @@ news: true
 social: true
 ---
 
-I am a PhD student at TU Delft doing research on **conversational search** under the supervision of [Claudia Hauff](https://chauff.github.io/){:target="_blank"}. I have BSc and MSc degrees from the Department of Computer Science (DCC) of UFMG - under the supervision of [Rodrygo Santos](https://homepages.dcc.ufmg.br/~rodrygo/){:target="_blank"}. Before joining the PhD, I worked with machine learning and data science projects for 3 years at [Hekima](http://www.hekima.com/en/){:target="_blank"}.
+I am a PhD student at TU Delft doing research on **conversational search** under the supervision of [Claudia Hauff](https://chauff.github.io/){:target="_blank"}. I have BSc and MSc degrees from the Department of Computer Science (DCC) of UFMG - under the supervision of [Rodrygo Santos](https://homepages.dcc.ufmg.br/~rodrygo/){:target="_blank"}. Before joining the PhD, I worked with machine learning and data science projects for 3 years at [Hekima](http://www.hekima.com/){:target="_blank"}.
 
 
 In the first year of my PhD I investigated neural ranking models for the conversation response ranking task. In particular models for information-seeking conversations: we created a novel dialogue corpus (MANtIS) of information-seeking conversations which has a few properties previous datasets lack. I developed and studied neural rankers inspired by techniques such as domain adaptation, curriculum learning and slice-based learning.
