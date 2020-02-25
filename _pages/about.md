@@ -6,7 +6,7 @@ description: PhD candidate at TU Delft
 
 profile:
   align: right
-  image: guz_1.png
+  image: guz_bw.jpg
   address: >
     <p>guzpenha10@gmail.com</p>
     <p>TU Delft, Netherlands</p>
