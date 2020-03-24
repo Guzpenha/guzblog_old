@@ -7,6 +7,7 @@ description: Publications in reversed chronological order.
 
 <h3 class="year">2020</h3> 
 * **Gustavo Penha**, Claudia Hauff. _Domain Adaptation for Conversation Response Ranking_ CAIR [[preprint](https://drive.google.com/open?id=1dj1MvtFju3RHako7l-avoXQsCT-6vc8V){:target="_blank"}] [[code](https://github.com/Guzpenha/DomainRegularizedDeepMatchingNetworks){:target="_blank"}]
+[[slides](https://docs.google.com/presentation/d/1PBsutHILQw5nNp_xefhW_gGTEJnEkhve2rdAZgZiCNk/edit#slide=id.g6fd1f3fd33_0_673){:target="_blank"}]
 
 * **Gustavo Penha**, Claudia Hauff. _Curriculum Learning Strategies for IR: An Empirical Study on Conversation Response Ranking._ ECIR [[preprint](https://arxiv.org/abs/1912.08555){:target="_blank"}] [[code](https://github.com/Guzpenha/transformers_cl){:target="_blank"}]
 

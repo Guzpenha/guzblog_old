@@ -4,12 +4,12 @@ permalink: /
 title: <strong>Gustavo</strong> Penha
 description: PhD candidate at TU Delft | guzpenha10@gmail.com
 
-<!-- profile:
+profile:
   align: right
-  image: guz_bw.jpg
+  image: eu_teste.jpeg
   address: >
-    <p>guzpenha10@gmail.com</p>
-    <p>TU Delft, Netherlands</p> -->
+    <p>Delft, Netherlands</p>
+
     
 
 news: true
