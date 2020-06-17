@@ -1,12 +1,13 @@
 .profile {
     img {
         box-shadow: 0 0 5px $grey-color;
-        width: 90%;
+        margin-left: 20px;
+        width: 65%;
     }
 }
 .address {
     font-family: monospace;
-
+    margin-left: 20px;
     p { margin: 0; }
 }
 
