@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2020-03-24
+date: 2020-07-07
 inline: true
 ---
 
-The slides for our CAIR'20 paper (Domain Adaptation for Conversation Response Ranking) are [available](https://docs.google.com/presentation/d/1PBsutHILQw5nNp_xefhW_gGTEJnEkhve2rdAZgZiCNk/edit#slide=id.g6fd1f3fd33_0_673){:target="_blank"}.
+Our paper on challenges of the evaluation of conversational search systems was accepted at the KDD Converse'20 workshop.
