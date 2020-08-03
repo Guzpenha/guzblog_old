@@ -400,9 +400,9 @@ footer a:hover { color: #B509AC; }
 .project .thumbnail a span p { color: #e8e8e8; }
 .project .thumbnail a:hover span { display: block; }
 
-.profile img { box-shadow: 0 0 5px #828282; width: 80%; }
+.profile img { box-shadow: 0 0 5px #828282; margin-left: 20px; width: 75%; }
 
-.address { font-family: monospace; }
+.address { font-family: monospace; margin-left: 20px; }
 .address p { margin: 0; }
 
 .news { border-top: 1px solid #e8e8e8; margin-top: 30px; padding-top: 20px; }

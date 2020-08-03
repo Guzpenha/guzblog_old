@@ -43,7 +43,7 @@
         <a class="page-link" href="http://localhost:4000/">about</a>
 
         <!-- Blog -->
-        <a class="page-link" href="http://localhost:4000/blog/">blog</a>
+        <!-- <a class="page-link" href="http://localhost:4000/blog/">blog</a> -->
 
         <!-- Pages -->
         
@@ -82,29 +82,33 @@
 
   <header class="post-header">
     <h1 class="post-title"><strong>Gustavo</strong> Penha</h1>
-    <h5 class="post-description">PhD candidate at TU Delft</h5>
+    <h5 class="post-description">PhD candidate at TU Delft | guzpenha10@gmail.com</h5>
   </header>
 
   <article class="post-content <strong>Gustavo</strong> Penha clearfix">
     
   <div class="profile col one right">
     
-      <img class="one" src="http://localhost:4000/assets/img/guz_bw.jpg">
+      <img class="one" src="http://localhost:4000/assets/img/eu_barcelona.jpg">
     
     
       <div class="address">
-        <p>guzpenha10@gmail.com</p> <p>TU Delft, Netherlands</p>
+        <p>Delft, Netherlands</p>
 
       </div>
     
   </div>
 
 
-<p>I am a PhD student at TU Delft doing research on <strong>conversational search</strong> under the supervision of <a href="https://chauff.github.io/" target="_blank">Claudia Hauff</a>. I have BSc and MSc degrees from the Department of Computer Science (DCC) of UFMG - under the supervision of <a href="https://homepages.dcc.ufmg.br/~rodrygo/" target="_blank">Rodrygo Santos</a>. Before joining the PhD, I worked with machine learning and data science projects for 3 years at <a href="http://www.hekima.com/en/" target="_blank">Hekima</a>.</p>
+<p>I am a PhD candidate at TU Delft on the topic of  conversational search under the supervision of <a href="https://chauff.github.io/" target="_blank">Claudia Hauff</a>. Before joining the PhD, I worked with machine learning and data science projects for 3 years at <a href="http://www.hekima.com/" target="_blank">Hekima</a>.</p>
 
-<p>In the first year of my PhD I investigated neural ranking models for the conversation response ranking task. In particular models for information-seeking conversations: we created a novel dialogue corpus (MANtIS) of information-seeking conversations which has a few properties previous datasets lack. I developed and studied neural rankers inspired by techniques such as domain adaptation, curriculum learning and slice-based learning.</p>
+<!-- I have BSc and MSc degrees from the Department of Computer Science (DCC) of UFMG - under the supervision of [Rodrygo Santos](https://homepages.dcc.ufmg.br/~rodrygo/){:target="_blank"} -->
 
-<p>Before joining the PhD, my research was focused on performance prediction, i.e. predicting the effectiveness of models, for recommendation, document classification and adhoc retrieval (<a href="https://homepages.dcc.ufmg.br/~rodrygo/wp-content/papercite-data/pdf/penha2019ecir.pdf">ECIR’19</a>, <a href="https://drive.google.com/file/d/1ScGA8EASeQbJvOLXJTBY77_zJNF0kspx/view">Master thesis</a>). When I was an undergrad I did research on scientific collaboration networks (<a href="https://link.springer.com/content/pdf/10.1186%2Fs13173-017-0059-6.pdf">JCBS</a>, <a href="https://dl.acm.org/doi/10.1007/s11192-016-1901-x]">Scientometrics</a>).</p>
+<p>My research is currently focused on neural rankers for information-seeking conversations. We created a novel dialogue corpus of information-seeking conversations which has a few properties previous datasets lack: <a href="https://guzpenha.github.io/MANtIS/" target="_blank">MANtIS</a>. We studied how neural rankers for dialogue perform on unseen domains, and how to improve then in the <a href="https://guzpenha.github.io/guzblog/assets/pdf/Domain_Adaptation_for_CRR_CAIR20.pdf" target="_blank">domain adaptation</a> setup. We also showed that by intelligently sorting the training batches we get more effective neural rankers: <a href="https://arxiv.org/abs/1912.08555" target="_blank">curriculum learning for IR</a>.  In our latest <a href="https://guzpenha.github.io/guzblog/assets/pdf/Challenges_CONVERSE20.pdf" target="_blank">work</a> we reflect on the challenges of current offline evaluation schemes for conversational search tasks.</p>
+
+<p>I am currently developing a library that facilitates experiments with pre-trained transformers, e.g. BERT, for ranking: <a href="https://guzpenha.github.io/transformer_rankers/" target="_blank"><strong>transformer-rankers</strong></a>. It can be used to quickly train and evaluate a transformer-based model for different ranking tasks, such as passage retrieval, adhoc retrieval, conversation response ranking, etc.</p>
+
+<!-- Before joining the PhD, my research was focused on performance prediction, i.e. predicting the effectiveness of models, for recommendation, document classification and adhoc retrieval ([ECIR'19](https://homepages.dcc.ufmg.br/~rodrygo/wp-content/papercite-data/pdf/penha2019ecir.pdf), [Master thesis](https://drive.google.com/file/d/1ScGA8EASeQbJvOLXJTBY77_zJNF0kspx/view)). As an undergrad I did research on scientific collaboration networks ([JCBS](https://link.springer.com/content/pdf/10.1186%2Fs13173-017-0059-6.pdf), [Scientometrics](https://dl.acm.org/doi/10.1007/s11192-016-1901-x])). -->
 
 
   </article>
@@ -117,10 +121,40 @@
     
     
       <tr>
-        <td class="date">Dec 29, 2019</td>
+        <td class="date">Jul 28, 2020</td>
         <td class="announcement">
           
-            Our <a href="https://drive.google.com/open?id=1dj1MvtFju3RHako7l-avoXQsCT-6vc8V" target="_blank">paper</a> on domain adaptation for conversation response ranking was accepted at CAIR’20.
+            Had 2 papers accepted at RecSys’20: <a href="https://arxiv.org/abs/2007.15356" target="_blank">(1)</a> on probing LMs for conversational recommendation and <a href="https://guzpenha.github.io/guzblog/assets/pdf/PerformanceEstimates_RecSys20.pdf" target="_blank">(2)</a> on enhancing recsys with performance estimates.
+
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="date">Jul 10, 2020</td>
+        <td class="announcement">
+          
+            I am open sourcing a library to quickly conduct experiments with pre-trained transformers for differen ranking tasks: <a href="https://guzpenha.github.io/transformer_rankers/">transformer-rankers</a>.
+
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="date">Jul 7, 2020</td>
+        <td class="announcement">
+          
+            Our paper on challenges of the evaluation of conversational search systems was accepted at the KDD Converse’20 workshop.
+
+          
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="date">Jan 26, 2020</td>
+        <td class="announcement">
+          
+            Our paper on domain adaptation for conversation response ranking was accepted at the CAIR’20 workshop.
 
           
         </td>
@@ -131,16 +165,6 @@
         <td class="announcement">
           
             The <a href="https://arxiv.org/abs/1912.08555">preprint</a> of our ECIR’20 paper on curriculum learning for the conversation response ranking task is up.
-
-          
-        </td>
-      </tr>
-    
-      <tr>
-        <td class="date">Dec 11, 2019</td>
-        <td class="announcement">
-          
-            We are releasing our new dataset of multi-domain information-seeking conversations called <a href="https://guzpenha.github.io/MANtIS/">MANtIS</a>!
 
           
         </td>
